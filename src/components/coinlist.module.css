@@ -1,0 +1,20 @@
+.coinlist {
+    padding: 3rem;
+    display: grid;
+    gap: 2rem;
+  }
+
+  .table {
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .coinlist {
+      grid-template-columns: auto auto;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .coinlist {
+      grid-template-columns: auto auto auto;
+    }
+  }
