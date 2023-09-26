@@ -1,0 +1,36 @@
+.coin {
+  background-color: #e6fad2;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 0.6rem;
+  transition: all 0.3s;
+  font-size: 16px;
+  line-height: 16px;
+}
+  .coin:hover {
+    /* transform: scale(1.1); */
+  }
+  
+  .flag {
+    width: 10rem;
+    height: 7rem;
+  }
+  
+  .btn {
+    border: none;
+    border-radius: 0;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    background-color: #305039;
+    transition: all 0.3s;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .btn:hover {
+    background-color: red;
+    color: white;
+  }
