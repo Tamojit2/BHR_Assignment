@@ -33,7 +33,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1>Crypto Coin List</h1>
+      <h1>Bringing Crypto to millions in India</h1>
       {isLoading && <h2>Loading...</h2>}
       {error && <h2>{error.message}</h2>}
       {coins && (

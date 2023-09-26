@@ -53,6 +53,10 @@ const PriceListing = () => {
 
   return (
     <>
+
+    <div>
+      <h1>Coin Price List</h1>
+    </div>
     <div class="tableSort">
       <table className="sortable-table">
         <thead>
