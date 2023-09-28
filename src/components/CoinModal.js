@@ -1,31 +1,33 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../App';
-import { LIVE_DATA } from '../CONST/constant';
+//import { LIVE_DATA } from '../CONST/constant';
 
-const CoinModal = ({ onClose, coinName, isModalOpen }) => {
+const CoinModal = ({ closeModal, coinName, isModalOpen, coinObj }) => {
 
-  const [coinDetails, setCoinDetails] = useState([]);
+  //const [coinDetails, setCoinDetails] = useState([]);
   
-  if(onClose === true) {
+  // if(onClose === true) {
 
-  }
+  // }
+
+  const coinDetails = coinObj;
   //console.log(LIVE_DATA+'?symbol='+coinName);
 
-  const fetchData = async (url) => {
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        setCoinDetails(data);
-    } catch (error) {
-        console.log(error);
-    }
-};
+//   const fetchData = async (url) => {
+//     try {
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         setCoinDetails(data);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
 
-useEffect(()=>{
-  if(isModalOpen){
-    fetchData(LIVE_DATA+'?symbol='+coinName);
-  }
-},[isModalOpen])
+// useEffect(()=>{
+//   if(isModalOpen){
+//     fetchData(LIVE_DATA+'?symbol='+coinName);
+//   }
+// },[isModalOpen])
 
 //console.log(coinDetails?.data?.baseCurrencyId);
 
@@ -35,7 +37,7 @@ useEffect(()=>{
     
     <div className="modal">
     <div className="modal-content">
-      <span className="close-button" onClick={onClose}> &times;</span>
+      <span className="close-button" onClick={() => {closeModal()}}> &times;</span>
 
       
       {coinDetails?.data?.map((coinInfo) => {

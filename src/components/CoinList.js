@@ -13,7 +13,7 @@ const CoinList = ({coinlist}) => {
           return (
             <Coin
               coinData = {coin}
-              key={coin.baseCurrencyId}
+              key={coin.baseCurrencyId+'_'+idx}
             />
           );
         } else {
